@@ -1,25 +1,21 @@
 package br.com.ftt.lpII.SimulacaoMundoReal;
 
-import java.util.Scanner;
 
 public class SimulacaoMundoReal {
 
 	public static void main(String[] args) {
 		
-		Pessoa bot = new Pessoa("Eva", 52, "192.168.0.10");		
-		bot.saudacao();
+		Pessoa j = new Joao("Joao", 35);
+		Pessoa m =  new Maria("Maria", 28);
+
+		System.out.println(j.saudacao());
+		System.out.println(j.apresentacao());
 		
-		Scanner s = new Scanner(System.in);
+		System.out.println(m.saudacao(j));
+		System.out.println(m.apresentacao(j));
 		
-		String nome = s.nextLine();
+		System.out.println(j.sentimento());
 		
-		Pessoa p = new Pessoa(nome);
-		
-		bot.idade(p);
-		int idade = s.nextInt();
-		p.setIdade(idade);
-		
-		bot.idade(idade);
 		
 	}
 
